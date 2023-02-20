@@ -15,7 +15,7 @@ export class HomePage {
   },{
     itemName: 'Reading Book',
     itemDueDate: '11-02-2022',
-    itemPriority: 'low',
+    itemPriority: 'medium',
     itemCategory: 'week'
   },{
     itemName: 'Sport',

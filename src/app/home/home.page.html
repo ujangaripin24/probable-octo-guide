@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-item>
-      <ion-label lines="none">
+      <ion-label lines="none" style="font-weight: 800; font-size: 3em;">
         Hari Ini
         <p style="font-weight: 400; color: #433435;" >{{ itemToday | date:'fullDate' }}</p>
       </ion-label>
@@ -10,14 +10,15 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+<ion-card *ngFor="let item of todoList" >
+  <ion-card-header>
+    <ion-card-subtitle [style.color]="item.itemPriority === 'hight' ? 'red' : (item.itemPriority === 'low' ? 'green' : 'orange')">
+      {{ item.itemCategory }}
+    </ion-card-subtitle>
+    <ion-item>
+      <ion-icon name="ellipse"></ion-icon>
+      <ion-label>{{ item.itemName }}</ion-label>
+    </ion-item>
+  </ion-card-header>
+</ion-card>
 </ion-content>
