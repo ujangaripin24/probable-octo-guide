@@ -15,10 +15,38 @@
     <ion-card-subtitle [style.color]="item.itemPriority === 'hight' ? 'red' : (item.itemPriority === 'low' ? 'green' : 'orange')">
       {{ item.itemCategory }}
     </ion-card-subtitle>
+
     <ion-item>
-      <ion-icon name="ellipse"></ion-icon>
+      <ion-icon *ngIf="item.itemPriority === 'hight'" color="danger" size="small" name="ellipse"></ion-icon>
+      <ion-icon *ngIf="item.itemPriority === 'low'" color="success" size="small" name="ellipse"></ion-icon>
+      <ion-icon *ngIf="item.itemPriority === 'medium'" color="warning" size="small" name="ellipse"></ion-icon>
       <ion-label>{{ item.itemName }}</ion-label>
     </ion-item>
   </ion-card-header>
+
+  <ion-card-content>
+    <ion-label>Due : {{ item.itemDueDate | date:'fullDate' }}</ion-label>
+  </ion-card-content>
+
+  <ion-row>
+    <ion-item>
+      <ion-icon name="share-outline"></ion-icon>
+      <p>Bagikan</p>
+    </ion-item>
+    <ion-item>
+      <ion-icon name="checkmark-outline"></ion-icon>
+      <p>Selesai</p>
+    </ion-item>
+    <ion-item>
+      <ion-icon name="delete-outline"></ion-icon>
+      <p>Hapus</p>
+    </ion-item>
+  </ion-row>
 </ion-card>
+
+<ion-fab vertical="bottom" horizontal="end" slot="fixed">
+  <ion-fab-button>
+    <ion-icon name="add"></ion-icon>
+  </ion-fab-button>
+</ion-fab>
 </ion-content>
