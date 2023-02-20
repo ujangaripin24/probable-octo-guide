@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-item>
-      <ion-label lines="none">
+      <ion-label lines="none" style="font-weight: 800; font-size: 3em;">
         Hari Ini
         <p style="font-weight: 400; color: #433435;" >{{ itemToday | date:'fullDate' }}</p>
       </ion-label>
@@ -10,14 +10,43 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-card *ngFor="let item of todoList" >
+  <ion-card-header>
+    <ion-card-subtitle [style.color]="item.itemPriority === 'hight' ? 'red' : (item.itemPriority === 'low' ? 'green' : 'orange')">
+      {{ item.itemCategory }}
+    </ion-card-subtitle>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+    <ion-item>
+      <ion-icon *ngIf="item.itemPriority === 'hight'" color="danger" size="small" name="ellipse"></ion-icon>
+      <ion-icon *ngIf="item.itemPriority === 'low'" color="success" size="small" name="ellipse"></ion-icon>
+      <ion-icon *ngIf="item.itemPriority === 'medium'" color="warning" size="small" name="ellipse"></ion-icon>
+      <ion-label>{{ item.itemName }}</ion-label>
+    </ion-item>
+  </ion-card-header>
+
+  <ion-card-content>
+    <ion-label>Due : {{ item.itemDueDate | date:'fullDate' }}</ion-label>
+  </ion-card-content>
+
+  <ion-row>
+    <ion-item>
+      <ion-icon name="share-outline"></ion-icon>
+      <p>Bagikan</p>
+    </ion-item>
+    <ion-item>
+      <ion-icon name="checkmark-outline"></ion-icon>
+      <p>Selesai</p>
+    </ion-item>
+    <ion-item>
+      <ion-icon name="delete-outline"></ion-icon>
+      <p>Hapus</p>
+    </ion-item>
+  </ion-row>
+</ion-card>
+
+<ion-fab vertical="bottom" horizontal="end" slot="fixed">
+  <ion-fab-button>
+    <ion-icon name="add"></ion-icon>
+  </ion-fab-button>
+</ion-fab>
 </ion-content>
