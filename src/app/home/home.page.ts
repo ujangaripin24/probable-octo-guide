@@ -29,6 +29,11 @@ export class HomePage {
     itemDueDate: '08-23-2022',
     itemPriority: 'low',
     itemCategory: 'week'
+  },{
+    itemName: 'Tidur',
+    itemDueDate: '08-23-2022',
+    itemPriority: 'hight',
+    itemCategory: 'week'
   },]
 
   itemToday : number = Date.now();
