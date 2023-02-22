@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { Tab2Page } from './tab2.page';
+import { PageLeafletPage } from './page-leaflet.page';
 
 const routes: Routes = [
   {
     path: '',
-    component: Tab2Page
+    component: PageLeafletPage
   }
 ];
 
@@ -14,4 +14,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class Tab2PageRoutingModule {}
+export class PageLeafletPageRoutingModule {}

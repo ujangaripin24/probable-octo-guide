@@ -4,17 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { Tab2PageRoutingModule } from './tab2-routing.module';
+import { PageLeafletPageRoutingModule } from './page-leaflet-routing.module';
 
-import { Tab2Page } from './tab2.page';
+import { PageLeafletPage } from './page-leaflet.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    Tab2PageRoutingModule
+    PageLeafletPageRoutingModule
   ],
-  declarations: [Tab2Page]
+  declarations: [PageLeafletPage]
 })
-export class Tab2PageModule {}
+export class PageLeafletPageModule {}
