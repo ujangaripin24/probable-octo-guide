@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import * as L from 'leaflet';
-import {Geocoder, geocoders} from 'leaflet-control-geocoder';
 
 @Component({
   selector: 'app-page-leaflet',
@@ -17,14 +16,6 @@ export class PageLeafletPage{
       attribution: 'Map data © <a href="https://openstreetmap.org">OpenStreetMap</a> contributors',
       maxZoom: 18,
     }).addTo(this.map);
-
-    //search geocoder location
-    const GeocoderControl = new Geocoder();
-    GeocoderControl.addTo(this.map);
-    GeocoderControl.on('markgeocode', function (e) {
-    console.log(e);
-    });
-    
   }
 
 }
