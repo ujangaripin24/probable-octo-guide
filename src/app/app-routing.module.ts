@@ -30,6 +30,14 @@ import { ExampleComponent } from './example/example.component';
           {
             path: 'leaflet',
             loadChildren: () =>  import ('./pages/page-leaflet/page-leaflet.module').then( m => m.PageLeafletPageModule)
+          },
+          {
+            path: 'weather',
+            loadChildren: () => import ('./pages/page-weather/page-weather.module').then( m => m.PageWeatherPageModule)
+          },
+          {
+            path: 'building',
+            loadChildren: () => import('./pages/page-capitals/page-capitals.module').then(m => m.PageCapitalsPageModule)
           }
         ],
       },
