@@ -32,12 +32,8 @@ import { ExampleComponent } from './example/example.component';
             loadChildren: () =>  import ('./pages/page-leaflet/page-leaflet.module').then( m => m.PageLeafletPageModule)
           },
           {
-            path: 'weather',
-            loadChildren: () => import ('./pages/page-weather/page-weather.module').then( m => m.PageWeatherPageModule)
-          },
-          {
-            path: 'building',
-            loadChildren: () => import('./pages/page-capitals/page-capitals.module').then(m => m.PageCapitalsPageModule)
+            path: 'pageLirikLagu',
+            loadChildren: () => import('./pages/page-lirik-lagu/page-lirik-lagu.module').then(m => m.PageLirikLaguPageModule)
           }
         ],
       },

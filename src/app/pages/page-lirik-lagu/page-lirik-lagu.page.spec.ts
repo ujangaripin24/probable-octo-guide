@@ -1,19 +1,19 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
 
-import { PageWeatherPage } from './page-weather.page';
+import { PageLirikLaguPage } from './page-lirik-lagu.page';
 
-describe('PageWeatherPage', () => {
-  let component: PageWeatherPage;
-  let fixture: ComponentFixture<PageWeatherPage>;
+describe('PageLirikLaguPage', () => {
+  let component: PageLirikLaguPage;
+  let fixture: ComponentFixture<PageLirikLaguPage>;
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ PageWeatherPage ],
+      declarations: [ PageLirikLaguPage ],
       imports: [IonicModule.forRoot()]
     }).compileComponents();
 
-    fixture = TestBed.createComponent(PageWeatherPage);
+    fixture = TestBed.createComponent(PageLirikLaguPage);
     component = fixture.componentInstance;
     fixture.detectChanges();
   }));

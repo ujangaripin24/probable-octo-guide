@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>pageLirikLagu</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-content>
+    <ion-list>
+      <ion-item *ngFor="let dataLagu of DataLaguHot">
+        <ion-label>{{ dataLagu.songTitle }}</ion-label>
+        <ion-note slot="end">{{ dataLagu.artist }}</ion-note>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-content>
