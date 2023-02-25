@@ -27,7 +27,22 @@
 		},
 		{
 			"name": "https://doa-doa-api-ahmadramadhan.fly.dev/",
-			"item": [],
+			"item": [
+				{
+					"name": "https://doa-doa-api-ahmadramadhan.fly.dev/api",
+					"id": "923c0366-3675-4670-8805-2d6a01150502",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "https://doa-doa-api-ahmadramadhan.fly.dev/api",
+						"description": "API Doa - Doa Harian\n"
+					},
+					"response": []
+				}
+			],
 			"id": "cfe316a5-87ff-408a-b8b5-460f852c183f"
 		}
 	]
