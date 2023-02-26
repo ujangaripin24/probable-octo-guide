@@ -1,0 +1,49 @@
+{
+	"info": {
+		"_postman_id": "2e05edd1-e151-4e2c-bf3c-b54742863c6d",
+		"name": "Github-Probable-Octo-Guide",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "https://song-lyrics-api.azharimm.dev/",
+			"item": [
+				{
+					"name": "https://song-lyrics-api.azharimm.dev/hot",
+					"id": "8dab8113-bddc-460b-9e23-4865541e319d",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "https://song-lyrics-api.azharimm.dev/hot",
+						"description": "API Hot Song"
+					},
+					"response": []
+				}
+			],
+			"id": "a90e7601-f901-426e-96f1-661e028f3bd6"
+		},
+		{
+			"name": "https://doa-doa-api-ahmadramadhan.fly.dev/",
+			"item": [
+				{
+					"name": "https://doa-doa-api-ahmadramadhan.fly.dev/api",
+					"id": "923c0366-3675-4670-8805-2d6a01150502",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "https://doa-doa-api-ahmadramadhan.fly.dev/api",
+						"description": "API Doa - Doa Harian\n"
+					},
+					"response": []
+				}
+			],
+			"id": "cfe316a5-87ff-408a-b8b5-460f852c183f"
+		}
+	]
+}
