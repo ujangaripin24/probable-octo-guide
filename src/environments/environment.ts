@@ -5,7 +5,8 @@
 export const environment = {
   production: false,
   baseUrlAPI: 'https://song-lyrics-api.azharimm.dev',
-  baseUrlPray: 'https://raw.githubusercontent.com'
+  baseUrlPray: 'https://raw.githubusercontent.com',
+  baseURLPos: 'https://kodepos-2d475.firebaseio.com'
 };
 
 /*
