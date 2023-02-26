@@ -47,7 +47,40 @@
 		},
 		{
 			"name": "https://kodepos-2d475.firebaseio.com/",
-			"item": [],
+			"item": [
+				{
+					"name": "https://kodepos-2d475.firebaseio.com/kota_kab/k69.json?print=pretty",
+					"id": "193d28ac-6524-46d6-ae2c-eff09fbff402",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://kodepos-2d475.firebaseio.com/kota_kab/k69.json?print=pretty",
+							"protocol": "https",
+							"host": [
+								"kodepos-2d475",
+								"firebaseio",
+								"com"
+							],
+							"path": [
+								"kota_kab",
+								"k69.json"
+							],
+							"query": [
+								{
+									"key": "print",
+									"value": "pretty"
+								}
+							]
+						},
+						"description": "API Kode Pos"
+					},
+					"response": []
+				}
+			],
 			"id": "471c125e-63a8-47dc-820f-7f825621415f"
 		}
 	]
