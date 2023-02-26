@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  baseUrlAPI: 'https://song-lyrics-api.azharimm.dev'
+  baseUrlAPI: 'https://song-lyrics-api.azharimm.dev',
+  baseUrlPray: 'https://raw.githubusercontent.com'
 };
 
 /*

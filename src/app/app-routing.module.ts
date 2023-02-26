@@ -34,6 +34,10 @@ import { ExampleComponent } from './example/example.component';
           {
             path: 'pageLirikLagu',
             loadChildren: () => import('./pages/page-lirik-lagu/page-lirik-lagu.module').then(m => m.PageLirikLaguPageModule)
+          },
+          {
+            path: 'pagePrayer',
+            loadChildren: () => import('./pages/page-prayer/page-prayer.module').then(m => m.PagePrayerPageModule)
           }
         ],
       },
