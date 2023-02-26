@@ -38,6 +38,10 @@ import { ExampleComponent } from './example/example.component';
           {
             path: 'pagePrayer',
             loadChildren: () => import('./pages/page-prayer/page-prayer.module').then(m => m.PagePrayerPageModule)
+          },
+          {
+            path: 'pageKodePos',
+            loadChildren: () => import('./pages/page-kode-pos/page-kode-pos.module'). then(m => m.PageKodePosPageModule)
           }
         ],
       },
