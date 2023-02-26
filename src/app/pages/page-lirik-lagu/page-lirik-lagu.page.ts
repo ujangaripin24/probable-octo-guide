@@ -30,7 +30,7 @@ export class PageLirikLaguPage implements OnInit {
 
   async showLoading() {
     const loading = await this.loadingCtrl.create({
-      message: 'Loading...',
+      message: 'Harap Tunggu...',
       spinner: 'circles',
     });
 
