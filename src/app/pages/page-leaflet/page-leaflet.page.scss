@@ -1,4 +1,36 @@
 @import "~leaflet/dist/leaflet.css";
+@import '~leaflet.markercluster/dist/MarkerCluster.css';
+@import '~leaflet.markercluster/dist/MarkerCluster.Default.css';
+/* Fix marker cluster image error */
+.leaflet-marker-icon,
+.leaflet-marker-shadow {
+  background-image: none !important;
+}
+
+/* Customize marker cluster styling */
+.marker-cluster-small {
+  background-color: #fee5d9 !important;
+  border-color: #fcbba1 !important;
+}
+
+.marker-cluster-medium {
+  background-color: #fcae91 !important;
+  border-color: #fb6a4a !important;
+}
+
+.marker-cluster-large {
+  background-color: #de2d26 !important;
+  border-color: #a50f15 !important;
+}
+
+.marker-cluster:hover {
+  background-color: #807dba !important;
+  border-color: #6a51a3 !important;
+}
+
+.marker-cluster-single {
+  display: none;
+}
 
 .map {
   height: 100vh;
