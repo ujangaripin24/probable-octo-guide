@@ -42,6 +42,10 @@ import { ExampleComponent } from './example/example.component';
           {
             path: 'pageKodePos',
             loadChildren: () => import('./pages/page-kode-pos/page-kode-pos.module'). then(m => m.PageKodePosPageModule)
+          },
+          {
+            path: 'pageSetting',
+            loadChildren: () => import('./pages/page-setting/page-setting.module').then(m => m.PageSettingPageModule)
           }
         ],
       },
