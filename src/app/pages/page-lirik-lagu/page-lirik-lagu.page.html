@@ -5,28 +5,38 @@
 </ion-header>
 
 <ion-content>
- <ion-card *ngFor="let dataLagu of DataLaguHot">
-  <ion-card-header>
-    <ion-card-title>{{ dataLagu.songTitle }}</ion-card-title>
-    <ion-card-subtitle>{{ dataLagu.artist }}</ion-card-subtitle>
-  </ion-card-header>
-  <ion-card-content>
-    <ion-list>
-      <ion-item>
-        <ion-thumbnail slot="start">
-          <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/thumbnail.svg" />
-        </ion-thumbnail>
-        <ion-label>{{ dataLagu.songLyrics }}</ion-label>
-      </ion-item>
-    </ion-list>
-    <ion-toolbar>
-      <ion-buttons>
-        <ion-button color="primary" fill="outline">
-          <ion-icon slot="start" name="star"></ion-icon>
-          Star
-        </ion-button>
-      </ion-buttons>
-    </ion-toolbar>
-  </ion-card-content>
-</ion-card>
+  <div class="sticky-top">
+    <div class="">
+      <div id="map" class="map"></div>
+    </div>
+  </div>
+  <ion-list>
+    <ion-card *ngFor="let dataLagu of DataLaguHot">
+      <ion-card-header>
+        <ion-card-title>{{ dataLagu.songTitle }}</ion-card-title>
+        <ion-card-subtitle>{{ dataLagu.artist }}</ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-list>
+          <ion-item>
+            <ion-thumbnail slot="start">
+              <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/thumbnail.svg" />
+            </ion-thumbnail>
+            <ion-label>{{ dataLagu.songLyrics }}</ion-label>
+          </ion-item>
+        </ion-list>
+        <ion-toolbar>
+          <ion-buttons>
+            <ion-button color="primary" fill="outline">
+              <ion-icon slot="start" name="star"></ion-icon>
+              Star
+            </ion-button>
+          </ion-buttons>
+        </ion-toolbar>
+      </ion-card-content>
+    </ion-card>
+  </ion-list>
+  <ion-infinite-scroll>
+    <ion-infinite-scroll-content loadingText="Please wait..." loadingSpinner="bubbles"></ion-infinite-scroll-content>
+  </ion-infinite-scroll>
 </ion-content>
