@@ -103,4 +103,5 @@ The source code for earlier versions of the Ionic Framework may exist in other r
 ### Build to Android using Capacitor
 - ionic cordova platform add android
 - ionic capacitor build android
+- echo $CAPACITOR_ANDROID_STUDIO_PATH => export CAPACITOR_ANDROID_STUDIO_PATH=/opt/android-studio/bin/studio.sh(location Android Studio)
 - npx cap open android (for Angular)
