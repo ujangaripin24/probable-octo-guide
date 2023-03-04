@@ -28,7 +28,7 @@ import { ExampleComponent } from './example/example.component';
             loadChildren: () => import('./pages/tab1/tab1.module').then( m => m.Tab1PageModule)
           },
           {
-            path: 'leaflet',
+            path: 'pageLeaflet',
             loadChildren: () =>  import ('./pages/page-leaflet/page-leaflet.module').then( m => m.PageLeafletPageModule)
           },
           {

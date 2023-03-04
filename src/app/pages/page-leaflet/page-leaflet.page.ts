@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import * as L from 'leaflet';
+import 'leaflet.markercluster';
 
 @Component({
   selector: 'app-page-leaflet',
@@ -8,6 +9,12 @@ import * as L from 'leaflet';
 })
 export class PageLeafletPage{
   map: L.Map;
+  dataMarkers = [
+    {namaKota: 'Bandung', latitude: -6.957761928333558, longitude: 107.60831075345683},
+    {namaKota: 'Jakarta', latitude: -6.21462, longitude: 106.84513},
+    {namaKota: 'Surabaya', latitude: -7.2575, longitude: 112.7521}
+  ];
+
   constructor() { }
 
   ionViewDidEnter() {
@@ -16,6 +23,14 @@ export class PageLeafletPage{
       attribution: 'Map data © <a href="https://openstreetmap.org">OpenStreetMap</a> contributors',
       maxZoom: 18,
     }).addTo(this.map);
-  }
+    
+    const markerClusterGroup = L.markerClusterGroup();
+    this.dataMarkers.forEach(marker => {
+      const dataMarker = L.marker([marker.latitude, marker.longitude]);
+      dataMarker.bindPopup(marker.namaKota);
+      markerClusterGroup.addLayer(dataMarker);
+    });
 
+    this.map.addLayer(markerClusterGroup);
+  }
 }

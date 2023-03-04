@@ -99,3 +99,8 @@ The source code for earlier versions of the Ionic Framework may exist in other r
 
 * **Ionic 2/3**: Moved to [`ionic-team/ionic-v3`](https://github.com/ionic-team/ionic-v3)
 * **Ionic 1**: Moved to [`ionic-team/ionic-v1`](https://github.com/ionic-team/ionic-v1)
+
+### Build to Android using Capacitor
+- ionic cordova platform add android
+- ionic capacitor build android
+- npx cap open android (for Angular)
