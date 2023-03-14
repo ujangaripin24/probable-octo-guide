@@ -46,6 +46,10 @@ import { ExampleComponent } from './example/example.component';
           {
             path: 'pageSetting',
             loadChildren: () => import('./pages/page-setting/page-setting.module').then(m => m.PageSettingPageModule)
+          },
+          {
+            path: 'pageLeafletGPS',
+            loadChildren: () => import('./pages/page-leaflet-gps/page-leaflet-gps-routing.module').then(m => m.PageLeafletGPSPageRoutingModule)
           }
         ],
       },

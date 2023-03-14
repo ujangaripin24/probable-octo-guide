@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>pageLirikLagu</ion-title>
+    <ion-title>Detail Lokasi</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -39,4 +39,10 @@
   <ion-infinite-scroll>
     <ion-infinite-scroll-content loadingText="Please wait..." loadingSpinner="bubbles"></ion-infinite-scroll-content>
   </ion-infinite-scroll>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="LeafletGPS()">
+      <ion-icon name="locate-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
 </ion-content>

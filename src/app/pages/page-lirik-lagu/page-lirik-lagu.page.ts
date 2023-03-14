@@ -4,6 +4,7 @@ import axios from 'axios';
 import { environment } from 'src/environments/environment';
 import { LoadingController } from '@ionic/angular';
 import * as L from 'leaflet';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-page-lirik-lagu',
@@ -13,7 +14,10 @@ import * as L from 'leaflet';
 export class PageLirikLaguPage implements OnInit {
   DataLaguHot: any;
   map: L.Map;
-  constructor(private http: HttpClient, private loadingCtrl: LoadingController) { }
+  constructor(
+    private http: HttpClient, 
+    private loadingCtrl: LoadingController,
+    private route: Router) { }
 
   ionViewDidEnter() {
     this.map = L.map('map').setView([-6.957761928333558, 107.60831075345683], 13);
@@ -48,6 +52,10 @@ export class PageLirikLaguPage implements OnInit {
 
   async dismissLoading() {
     await this.loadingCtrl.dismiss();
+  }
+
+  async LeafletGPS(){
+    this.route.navigate(['/pageLeafletGPS']);
   }
 }
 
